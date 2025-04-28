@@ -1,0 +1,128 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps */
+body {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  background: #006475;
+  backdrop-filter: blur(0.25px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Navigation */
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+}
+
+.nav-center li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-center li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #00d9ff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-center li a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-center li a:hover {
+  color: #00d9ff;
+  transform: scale(1.1);
+}
+
+.nav-center li a.active {
+  color: #00d9ff;
+}
+
+/* Section CV */
+.cv-section {
+  padding-top: 130px; /* Pour dégager sous le header */
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.cv-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #006475;
+}
+
+/* Image du CV */
+.cv-image-container {
+  max-width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cv-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-section h1 {
+      font-size: 2rem;
+  }
+}
+
+.cv-image-container {
+  max-width: 700px; /* Avant 90% du viewport, maintenant fixé */
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cv-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
